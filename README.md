@@ -136,8 +136,7 @@ AppRegistry.registerComponent('swiper', () => swiper)
 | showsPagination | true | `bool` | Set to `true` make pagination visible. |
 | paginationStyle | {...} | `style` | Custom styles will merge with the default styles. |
 | renderPagination | - | `function` | Complete control how to render pagination with three params (`index`, `total`, `context`) ref to `this.state.index` / `this.state.total` / `this`, For example: show numbers instead of dots. |
-| dot | `<View style={{backgroundColor:'rgba(0,0,0,.2)', width: 8, height: 8,borderRadius: 4, marginLeft: 3, marginRight: 3, marginTop: 3, marginBottom: 3,}} />` | `element` | Allow custom the dot element. |
-| activeDot | `<View style={{backgroundColor: '#007aff', width: 8, height: 8, borderRadius: 4, marginLeft: 3, marginRight: 3, marginTop: 3, marginBottom: 3,}} />` | `element` | Allow custom the active-dot element. |
+| renderDot | - | `function` | Custom dot render method that receives (index, isActive) arguments. Don't forget to set `key` |
 
 #### Autoplay
 
