@@ -1,13 +1,13 @@
 # react-native-swiper
 
-[![npm version](http://img.shields.io/npm/v/react-native-swiper.svg?style=flat-square)](https://npmjs.org/package/react-native-swiper "View this project on npm")
-[![npm version](http://img.shields.io/npm/dm/react-native-swiper.svg?style=flat-square)](https://npmjs.org/package/react-native-swiper "View this project on npm")
-[![Issue Stats](http://issuestats.com/github/leecade/react-native-swiper/badge/pr?style=flat-square)](https://github.com/leecade/react-native-swiper/pulls?q=is%3Apr+is%3Aclosed)
-[![Issue Stats](http://issuestats.com/github/leecade/react-native-swiper/badge/issue?style=flat-square)](https://github.com/leecade/react-native-swiper/issues?q=is%3Aissue+is%3Aclosed)
+[![Issue Stats](http://issuestats.com/github/manandmoon/react-native-swiper/badge/pr?style=flat-square)](https://github.com/manandmoon/react-native-swiper/pulls?q=is%3Apr+is%3Aclosed)
+[![Issue Stats](http://issuestats.com/github/manandmoon/react-native-swiper/badge/issue?style=flat-square)](https://github.com/manandmoon/react-native-swiper/issues?q=is%3Aissue+is%3Aclosed)
 
 ![logo](http://i.imgur.com/P4cRUgD.png)
 
-The best Swiper component for React Native.
+* This is a fork of `react-native-swiper` by leecade that works (tm) *
+
+> The best Swiper component for React Native.
 
 ## Feature & TODO
 
@@ -39,28 +39,7 @@ The best Swiper component for React Native.
 
 ## Changelogs
 
-- **[v1.3.0]**
-  + [8d6d75c](https://github.com/leecade/react-native-swiper/commit/8d6d75c00edf87b603c218aad0018932277814b5) inject `state` in ScrollResponders (@thanks [@smothers](https://github.com/smothers)).
-
-- [v1.2.2]
-  + [890c0ce](https://github.com/leecade/react-native-swiper/commit/890c0ce64e2192c2ca7830e6699f67b88171e74b) ensure `onMomentumScrollEnd` synchronous update `index`.
-
-- [v1.2.0]
-  + [838b24c](https://github.com/leecade/react-native-swiper/commit/838b24cbeaf49b9ca1dabb4eed8305e314503fb1) Re-design a loop model for avoid img flickering.
-  + [9cb91c5](https://github.com/leecade/react-native-swiper/commit/9cb91c58c84034b0b8b874dbfc2a44da982686a8) fixes [#7](https://github.com/leecade/react-native-swiper/issues/6) `onMomentumScrollEnd` lost `event` param. (thanks [@smothers](https://github.com/smothers))
-
-- [v1.1.1]
-  + [21f0b00](https://github.com/leecade/react-native-swiper/commit/21f0b00138b6936cd3dfac2eb107a14c99c7392b) fixes [#6](https://github.com/leecade/react-native-swiper/issues/6) a define-propType error. (thanks [@benjamingeorge](https://github.com/benjamingeorge))
-
-- [v1.1.0]
-  + [44ec630](https://github.com/leecade/react-native-swiper/commit/44ec630b62844dbeaccee73adaa0996e319ebffb) fixes [#4](https://github.com/leecade/react-native-swiper/issues/4) `onMoementumScrollEnd` gets overridden. (thanks [@subpublicanders](https://github.com/subpublicanders))
-  + [5de06a7](https://github.com/leecade/react-native-swiper/commit/5de06a7aa86318ad38720728022b80e5cf98a2ab) New prop: `renderPagination`. (thanks [@aksonov](https://github.com/aksonov))
-
-- [v1.0.4]
-  + [21cb373](https://github.com/leecade/react-native-swiper/commit/21cb3732578588f9d47ee7ddda541577ad691970) fixes [#2](https://github.com/leecade/react-native-swiper/issues/2) Solve the problem of installation. (thanks [@jamwaffles](https://github.com/jamwaffles))
-
-- [v1.0.3]
-  + [0f796f3](https://github.com/leecade/react-native-swiper/commit/0f796f3557b5aeb1772573cd7ecae2e835bccc0b) fixes [#1](https://github.com/leecade/react-native-swiper/issues/1) Two 'horizontal' in propTypes. (thanks [@MacyzZ](https://github.com/MacyzZ))
+See releases tab.
 
 ## Show Cases
 
@@ -288,16 +267,25 @@ var swiper = React.createClass({
 
 ### Development
 
+To start development, run babel watcher to recompile all your changes to `dist` folder.
+
 ```bash
 $ npm start
+```
+
+To build separately, run
+
+```bash
+$ npm run build
 ```
 
 ## Contribution
 
 - [@leecade](mailto:leecade@163.com) The main author.
+- [@grabbou](mailto:leecade@163.com) The fork author & maintainer.
 
 ## Questions
 
-Feel free to [contact me](mailto:leecade@163.com) or [create an issue](https://github.com/leecade/react-native-swiper/issues/new)
+Feel free to [contact me](mailto:grabbou@gmail.com) or [create an issue](https://github.com/manandmoon/react-native-swiper/issues/new)
 
 > Inspired by [nolimits4web/Swiper](https://github.com/nolimits4web/swiper/) & Design material from [Dribbble](https://dribbble.com/) & made with ♥.

@@ -327,7 +327,7 @@ export default React.createClass({
     let dots = []
     for(let i = 0; i < this.state.total; i++) {
       dots.push(i === this.state.index
-        ? (this.props.activeDot || <View style={{
+        ? (this.props.activeDot || <View key={i} style={{
             backgroundColor: '#007aff',
             width: 8,
             height: 8,
