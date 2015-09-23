@@ -1,9 +1,4 @@
 'use strict';
-/*
-react-native-swiper
-
-@author leecade<leecade@163.com>
- */
 Object.defineProperty(exports, '__esModule', {
   value: true
 });
@@ -16,98 +11,22 @@ var _reactNative = require('react-native');
 
 var _reactNative2 = _interopRequireDefault(_reactNative);
 
-// Using bare setTimeout, setInterval, setImmediate
-// and requestAnimationFrame calls is very dangerous
-// because if you forget to cancel the request before
-// the component is unmounted, you risk the callback
-// throwing an exception.
-
 var _reactTimerMixin = require('react-timer-mixin');
 
 var _reactTimerMixin2 = _interopRequireDefault(_reactTimerMixin);
 
-var _Dimensions = require('Dimensions');
+var _indexStyle = require('./index.style');
 
-var _Dimensions2 = _interopRequireDefault(_Dimensions);
+var _indexStyle2 = _interopRequireDefault(_indexStyle);
 
-var _Dimensions$get = _Dimensions2['default'].get('window');
+var _Dimensions$get = _reactNative.Dimensions.get('window');
 
 var width = _Dimensions$get.width;
 var height = _Dimensions$get.height;
 
-/**
- * Default styles
- * @type {StyleSheetPropType}
- */
-var styles = _reactNative.StyleSheet.create({
-  container: {
-    backgroundColor: 'transparent',
-    position: 'relative'
-  },
-
-  wrapper: {
-    backgroundColor: 'transparent'
-  },
-
-  slide: {
-    backgroundColor: 'transparent'
-  },
-
-  pagination_x: {
-    position: 'absolute',
-    bottom: 25,
-    left: 0,
-    right: 0,
-    flexDirection: 'row',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'transparent'
-  },
-
-  pagination_y: {
-    position: 'absolute',
-    right: 15,
-    top: 0,
-    bottom: 0,
-    flexDirection: 'column',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'transparent'
-  },
-
-  title: {
-    height: 30,
-    justifyContent: 'center',
-    position: 'absolute',
-    paddingLeft: 10,
-    bottom: -30,
-    left: 0,
-    flexWrap: 'nowrap',
-    width: 250,
-    backgroundColor: 'transparent'
-  },
-
-  buttonWrapper: {
-    backgroundColor: 'transparent',
-    flexDirection: 'row',
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    flex: 1,
-    paddingHorizontal: 10,
-    paddingVertical: 10,
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-
-  buttonText: {
-    fontSize: 50,
-    color: '#007aff',
-    fontFamily: 'Arial'
-  }
-});
+function defaultRenderDot(index, isActive) {
+  return _reactNative2['default'].createElement(_reactNative.View, { key: index, style: isActive ? _indexStyle2['default'].activeDot : _indexStyle2['default'].dot });
+}
 
 exports['default'] = _reactNative2['default'].createClass({
   displayName: 'index',
@@ -134,7 +53,8 @@ exports['default'] = _reactNative2['default'].createClass({
     autoplayTimeout: _reactNative2['default'].PropTypes.number,
     autoplayDirection: _reactNative2['default'].PropTypes.bool,
     index: _reactNative2['default'].PropTypes.number,
-    renderPagination: _reactNative2['default'].PropTypes.func
+    renderPagination: _reactNative2['default'].PropTypes.func,
+    renderDot: _reactNative2['default'].PropTypes.func
   },
 
   mixins: [_reactTimerMixin2['default']],
@@ -160,7 +80,8 @@ exports['default'] = _reactNative2['default'].createClass({
       autoplay: false,
       autoplayTimeout: 2.5,
       autoplayDirection: true,
-      index: 0
+      index: 0,
+      renderDot: defaultRenderDot
     };
   },
 
@@ -333,31 +254,15 @@ exports['default'] = _reactNative2['default'].createClass({
     if (this.state.total <= 1) return null;
 
     var dots = [];
+
     for (var i = 0; i < this.state.total; i++) {
-      dots.push(i === this.state.index ? this.props.activeDot || _reactNative2['default'].createElement(_reactNative.View, { key: i, style: {
-          backgroundColor: '#007aff',
-          width: 8,
-          height: 8,
-          borderRadius: 4,
-          marginLeft: 3,
-          marginRight: 3,
-          marginTop: 3,
-          marginBottom: 3
-        } }) : this.props.dot || _reactNative2['default'].createElement(_reactNative.View, { style: {
-          backgroundColor: 'rgba(0,0,0,.2)',
-          width: 8,
-          height: 8,
-          borderRadius: 4,
-          marginLeft: 3,
-          marginRight: 3,
-          marginTop: 3,
-          marginBottom: 3
-        } }));
+      var isActive = i === this.state.index;
+      dots.push(this.props.renderDot(i, isActive));
     }
 
     return _reactNative2['default'].createElement(
       _reactNative.View,
-      { pointerEvents: 'none', style: [styles['pagination_' + this.state.dir], this.props.paginationStyle] },
+      { pointerEvents: 'none', style: [_indexStyle2['default']['pagination_' + this.state.dir], this.props.paginationStyle] },
       dots
     );
   },
@@ -367,7 +272,7 @@ exports['default'] = _reactNative2['default'].createClass({
     var title = child && child.props.title;
     return title ? _reactNative2['default'].createElement(
       _reactNative.View,
-      { style: styles.title },
+      { style: _indexStyle2['default'].title },
       this.props.children[this.state.index].props.title
     ) : null;
   },
@@ -380,7 +285,7 @@ exports['default'] = _reactNative2['default'].createClass({
     if (this.props.loop || this.state.index != this.state.total - 1) {
       button = this.props.nextButton || _reactNative2['default'].createElement(
         _reactNative.Text,
-        { style: styles.buttonText },
+        { style: _indexStyle2['default'].buttonText },
         '›'
       );
     }
@@ -406,7 +311,7 @@ exports['default'] = _reactNative2['default'].createClass({
     if (this.props.loop || this.state.index != 0) {
       button = this.props.prevButton || _reactNative2['default'].createElement(
         _reactNative.Text,
-        { style: styles.buttonText },
+        { style: _indexStyle2['default'].buttonText },
         '‹'
       );
     }
@@ -424,10 +329,10 @@ exports['default'] = _reactNative2['default'].createClass({
     );
   },
 
-  renderButtons: function renderButtons() {
+  renderButtons: function renderButtons(width, height) {
     return _reactNative2['default'].createElement(
       _reactNative.View,
-      { pointerEvents: 'box-none', style: [styles.buttonWrapper, { width: this.state.width, height: this.state.height }, this.props.buttonWrapperStyle] },
+      { pointerEvents: 'box-none', style: [_indexStyle2['default'].buttonWrapper, { width: width, height: height }, this.props.buttonWrapperStyle] },
       this.renderPrevButton(),
       this.renderNextButton()
     );
@@ -479,7 +384,12 @@ exports['default'] = _reactNative2['default'].createClass({
     var key = 0;
 
     var pages = [];
-    var pageStyle = [{ width: state.width, height: state.height }, styles.slide];
+    var pageStyle = [{ width: state.width, height: state.height }, _indexStyle2['default'].slide];
+
+    var containerStyle = {
+      width: state.width,
+      height: state.height
+    };
 
     // For make infinite at least total > 1
     if (total > 1) {
@@ -506,15 +416,12 @@ exports['default'] = _reactNative2['default'].createClass({
 
     return _reactNative2['default'].createElement(
       _reactNative.View,
-      { style: [styles.container, {
-          width: state.width,
-          height: state.height
-        }] },
+      { style: [_indexStyle2['default'].container, containerStyle] },
       _reactNative2['default'].createElement(
         _reactNative.ScrollView,
         _extends({ ref: 'scrollView'
         }, props, {
-          contentContainerStyle: [styles.wrapper, props.style],
+          contentContainerStyle: [_indexStyle2['default'].wrapper, props.style],
           contentOffset: state.offset,
           onScrollBeginDrag: this.onScrollBegin,
           onMomentumScrollEnd: this.onScrollEnd }),
@@ -522,7 +429,7 @@ exports['default'] = _reactNative2['default'].createClass({
       ),
       props.showsPagination && (props.renderPagination ? this.props.renderPagination(state.index, state.total, this) : this.renderPagination()),
       this.renderTitle(),
-      this.props.showsButtons && this.renderButtons()
+      this.props.showsButtons && this.renderButtons(state.width, state.height)
     );
   }
 });

@@ -22,10 +22,13 @@
     "url": "https://github.com/manandmoon/react-native-swiper/issues"
   },
   "homepage": "https://github.com/manandmoon/react-native-swiper#readme",
+  "dependencies": {
+    "react-timer-mixin": "^0.13.3"
+  },
   "devDependencies": {
     "babel": "^5.1.11",
-    "eslint": "^1.4.1",
-    "eslint-plugin-react": "^3.3.2",
-    "babel-eslint": "^4.1.2"
+    "babel-eslint": "^4.1.2",
+    "eslint": "^1.5.1",
+    "eslint-plugin-react": "^3.3.2"
   }
 }
