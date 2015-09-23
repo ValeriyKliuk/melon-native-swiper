@@ -9,26 +9,6 @@
 
 Development is sponsored by Man+Moon and is likely to continue with next months.
 
-## Show Cases
-
-> Try these cases by yourself very easy, Just open `examples/swiper.xcodeproj` with Xcode, then press `Cmd + R`; you may edit `examples/index.ios.js` for switch cases.
-
-### [examples/basic.js](https://github.com/leecade/react-native-swiper/blob/master/examples/examples/basic.js)
-
-![](http://i.imgur.com/zrsazAG.gif =300x)
-
-### [examples/swiper.js](https://github.com/leecade/react-native-swiper/blob/master/examples/examples/swiper.js)
-
-![](http://i.imgur.com/hP3f3oO.gif =300x)
-
-### [examples/swiper_number.js](https://github.com/leecade/react-native-swiper/blob/master/examples/examples/swiper_number.js)
-
-![](http://i.imgur.com/0rqESVb.gif =300x)
-
-### [examples/phone.js](https://github.com/leecade/react-native-swiper/blob/master/examples/examples/phone.js)
-
-![](http://i.imgur.com/c1BhjZm.gif =300x)
-
 ## Getting Started
 
 - [Installation](#installation)
@@ -48,7 +28,7 @@ Development is sponsored by Man+Moon and is likely to continue with next months.
 ### Installation
 
 ```bash
-$ npm i react-native-swiper --save
+$ npm i react-native-mswiper --save
 ```
 
 ### Basic Usage
@@ -68,9 +48,9 @@ $ react-native init myproject
 - Then, edit `myproject/index.ios.js`, like this:
 
 ```jsx
-var Swiper = require('react-native-swiper')
+var Swiper = require('react-native-mswiper')
 // es6
-// import Swiper from 'react-native-swiper'
+// import Swiper from 'react-native-mswiper'
 
 var React = require('react-native');
 var {
@@ -231,7 +211,21 @@ var swiper = React.createClass({
 
 ### Examples
 
-@TODO, see code in [examples](https://github.com/leecade/react-native-swiper/tree/master/examples/examples) first.
+#### [examples/basic.js](https://github.com/manandmoon/react-native-swiper/blob/master/examples/examples/basic.js)
+
+<img src="http://i.imgur.com/zrsazAG.gif" width="150" />
+
+#### [examples/swiper.js](https://github.com/manandmoon/react-native-swiper/blob/master/examples/examples/swiper.js)
+
+<img src="http://i.imgur.com/hP3f3oO.gif" width="150" />
+
+#### [examples/swiper_number.js](https://github.com/manandmoon/react-native-swiper/blob/master/examples/examples/swiper_number.js)
+
+<img src="http://i.imgur.com/0rqESVb.gif" width="150" />
+
+#### [examples/phone.js](https://github.com/manandmoon/react-native-swiper/blob/master/examples/examples/phone.js)
+
+<img src="http://i.imgur.com/c1BhjZm.gif" width="150" />
 
 ### Development
 
