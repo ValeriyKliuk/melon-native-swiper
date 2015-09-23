@@ -6,7 +6,7 @@
     "ios",
     "swiper"
   ],
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Swiper component for React Native.",
   "main": "dist/index.js",
   "scripts": {
