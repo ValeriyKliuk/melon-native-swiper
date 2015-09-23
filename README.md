@@ -3,43 +3,11 @@
 [![Issue Stats](http://issuestats.com/github/manandmoon/react-native-swiper/badge/pr?style=flat-square)](https://github.com/manandmoon/react-native-swiper/pulls?q=is%3Apr+is%3Aclosed)
 [![Issue Stats](http://issuestats.com/github/manandmoon/react-native-swiper/badge/issue?style=flat-square)](https://github.com/manandmoon/react-native-swiper/issues?q=is%3Aissue+is%3Aclosed)
 
-![logo](http://i.imgur.com/P4cRUgD.png)
-
-* This is a fork of `react-native-swiper` by leecade that works (tm) *
+**This is a fork of `react-native-swiper` by leecade that works (tm)**
 
 > The best Swiper component for React Native.
 
-## Feature & TODO
-
-- [ ] More switch effects
-
-- [ ] Unit tests
-
-- [ ] Check typo
-
-- [x] Infinite loop
-
-- [x] Direction control
-
-- [x] Complete custom style
-
-- [x] Allow title display & custom
-
-- [x] Multiple instances
-
-- [x] Custom container size
-
-- [x] Control buttons
-
-- [x] Autoplay
-
-- [x] Custom pagination style
-
-- [x] State inject
-
-## Changelogs
-
-See releases tab.
+Development is sponsored by Man+Moon and is likely to continue with next months.
 
 ## Show Cases
 
