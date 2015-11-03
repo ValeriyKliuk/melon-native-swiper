@@ -1,4 +1,4 @@
-# react-native-swiper-fork
+# melon-native-swiper
 
 [![npm version](http://img.shields.io/npm/v/react-native-swiper-fork.svg?style=flat-square)](https://npmjs.org/package/react-native-swiper-fork "View this project on npm")
 [![npm version](http://img.shields.io/npm/dm/react-native-swiper-fork.svg?style=flat-square)](https://npmjs.org/package/react-native-swiper-fork "View this project on npm")

@@ -1,35 +1,30 @@
 {
-  "name": "react-native-swiper-fork",
+  "name": "melon-native-swiper",
   "keywords": [
     "react-component",
     "react-native",
     "ios"
   ],
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Swiper component for React Native.",
-  "main": "dist/index.js",
+  "main": "src/Swiper.js",
   "scripts": {
-    "start": "node_modules/.bin/babel src --out-dir dist",
-    "watch": "node_modules/.bin/babel src --out-dir dist --watch"
+    "start": "node_modules/react-native/packager/packager.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manandmoon/react-native-swiper.git"
+    "url": "git+https://github.com/react-melon/melon-native-swiper.git"
   },
   "author": "Mike Grabowski <grabbou@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manandmoon/react-native-swiper/issues"
+    "url": "https://github.com/react-melon/melon-native-swiper/issues"
   },
-  "homepage": "https://github.com/manandmoon/react-native-swiper#readme",
-  "devDependencies": {
-    "babel": "^5.1.11"
-  },
+  "homepage": "https://github.com/react-melon/melon-native-swiper#readme",
   "peerDependencies": {
-    "react": ">= 0.10"
+    "react-native": "^0.13.2"
   },
   "dependencies": {
-    "react-native-clone-referenced-element": "^1.0.0",
     "react-timer-mixin": "^0.13.3"
   }
 }
